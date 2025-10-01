@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/bookstore.dir/link.d CMakeFiles/bookstore.dir/bookstore.cpp.o -o bookstore

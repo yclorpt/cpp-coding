@@ -1,0 +1,3 @@
+/home/user/cpp-coding/build/CMakeFiles/bookstore.dir
+/home/user/cpp-coding/build/CMakeFiles/edit_cache.dir
+/home/user/cpp-coding/build/CMakeFiles/rebuild_cache.dir
