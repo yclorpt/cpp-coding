@@ -11,21 +11,16 @@
 //
 
 #include <iostream>
-using namespace std;
 
 int main(){
+  int sum = 0; int value = 0;
 
-  cout << "Printing sum of numbers from x -> y\n Enter your start and end: "
-       << endl;
-  int x = 0, y = 0, sum = 0, i = 1 ;
-  cin >> x >> y;
+  std::cout << "Enter numbers to add: " << std::endl;
 
-  while (i <= y) {
-    sum += x;
-    x++;
-    i++;
+  while (std::cin >> value){
+    sum += value;
   }
-  cout << sum << " is the inclusive total of them added up" << endl;
 
+  std::cout << "Your total is: " << sum << std::endl;
   return 0;
 }
