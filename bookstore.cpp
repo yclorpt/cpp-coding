@@ -1,26 +1,29 @@
-// Store keeps a file of transactions. Each records the sale of 1+ copies of a single book
-// 3 Data elements:
-//   0-201-70353-X : ISBN/Book Identifier
-//   4             : # of Copies Sold
-//   24.99         : Price
-//
-// Each book needs:
-//   # of Copies Sold
-//   Total revenue from book
-//   Average sales price
-//
 
 #include <iostream>
 
 int main(){
-  int sum = 0; int value = 0;
+  int cVal = 0, val = 0;
 
-  std::cout << "Enter numbers to add: " << std::endl;
-
-  while (std::cin >> value){
-    sum += value;
+  if (std::cin >> cVal){     // take in current value
+    int cnt = 1;             // start count at one since user already inputted a value
+    while (std::cin >> val){ // take in new values
+      if (val == cVal){
+        ++cnt;
+  }
+      else if (val != cVal){
+        std::cout << std::endl << cVal << " occurs "
+        << cnt << " times" << std::endl;
+        cVal = val;
+        cnt = 1;
+      }
+      else{
+        std::cout << std::endl << cVal << " occurs "
+        << cnt << " times" << std::endl;
+      }
+    }
+    std::cout << std::endl << cVal << " occurs "
+    << cnt << " times" << std::endl;
   }
 
-  std::cout << "Your total is: " << sum << std::endl;
   return 0;
 }
